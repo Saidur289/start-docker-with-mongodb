@@ -6,7 +6,7 @@ import logger from "morgan";
 import cors from "cors";
 import crudRoutes from "./routes/crud";
 const app = express();
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 4000;
 const url = process.env.MONGO_DB_URL;
 
 mongoose
@@ -32,5 +32,5 @@ app.use(function (req, res, next) {
 });
 
 app.listen(port, () => {
-  console.log("The server is up...");
+  console.log(`The server is up... on port ${port}`);
 });
